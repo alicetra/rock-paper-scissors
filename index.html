@@ -1,0 +1,36 @@
+<script>
+const choice = ["rock","paper","scissors"]
+// Prompt to ask player choice. Make it case insentitive
+let currentPlayer = prompt("Please input: Rock, Paper, Scissors").toLowerCase();
+// computer random choice
+let computerPlay = choice[Math.floor(Math.random() * choice.length)];
+// determine winner
+function playRound(playerSelection,computerSelection) {
+if (computerPlay===currentPlayer) {
+    alert ("It is a tie!");
+}
+else if (computerPlay==="rock" && currentPlayer==="paper") {
+    alert ("Paper beats Rock. You win !");
+}
+else if (computerPlay==="paper" && currentPlayer==="rock") {
+    alert ("Paper beats Rock. You lost.");
+}
+else if (computerPlay==="paper" && currentPlayer==="scissors") {
+    alert ("Scissors beats Rock. You win!");
+}
+else if (computerPlay==="scissors" && currentPlayer==="paper") {
+    alert ("Scissors beats Rock. You lost.");
+}
+else if (computerPlay==="scissors" && currentPlayer==="rock") {
+    alert ("Rock beats Scissors. You win!");
+}
+else if (computerPlay==="rock" && currentPlayer==="scissors") {
+    alert ("Rock beats Scissors. You lost.");
+}
+}
+const playerSelection = currentPlayer
+const computerSelection = computerPlay
+
+console.log(playRound(playerSelection,computerSelection))
+
+</script>
