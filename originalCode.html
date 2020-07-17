@@ -1,0 +1,129 @@
+<script>
+    function game() {
+        const choice = ["rock", "paper", "scissors"]
+        // Prompt to ask player choice. Make it case insentitive
+        let currentPlayer = prompt("Please input: Rock, Paper, Scissors").toLowerCase();
+        // computer random choice
+        let computerPlay = choice[Math.floor(Math.random() * choice.length)];
+        //single round winner
+        //0 =win
+        //1 = lost
+        //2=tie
+        let outcome = 0
+        // determine winner
+
+        if (currentPlayer === computerPlay) {
+            alert("It is a tie!");
+            outcome = 2
+        }
+        else if (computerPlay === "rock" && currentPlayer === "paper") {
+            alert("Paper beats Rock. You win !");
+            outcome = 0
+        }
+        else if (computerPlay === "paper" && currentPlayer === "rock") {
+            alert("Paper beats Rock. You lost.");
+            outcome = 1
+        }
+        else if (computerPlay === "paper" && currentPlayer === "scissors") {
+            alert("Scissors beats Paper. You win!");
+            outcome = 0
+        }
+        else if (computerPlay === "scissors" && currentPlayer === "paper") {
+            alert("Scissors beats Paper. You lost.");
+            outcome = 1
+        }
+        else if (computerPlay === "scissors" && currentPlayer === "rock") {
+            alert("Rock beats Scissors. You win!");
+            outcome = 0
+        }
+        else if (computerPlay === "rock" && currentPlayer === "scissors") {
+            alert("Rock beats Scissors. You lost.");
+            outcome = 1
+        }
+        return outcome
+    }
+
+
+    function multipleRounds() {
+
+        let currentPlayer = 0
+        let computerPlay = 0
+        let tie = 0
+
+        roundWinner = game()
+        if (roundWinner == 0) {
+            ++currentPlayer;
+        }
+        else if (roundWinner == 1) {
+            ++computerPlay;
+        }
+        else if (roundWinner == 2) {
+            ++tie;
+        }
+
+        roundWinner = game()
+        if (roundWinner == 0) {
+            ++currentPlayer;
+        }
+        else if (roundWinner == 1) {
+            ++computerPlay;
+        }
+        else if (roundWinner == 2) {
+            ++tie;
+        }
+
+        roundWinner = game()
+        if (roundWinner == 0) {
+            ++currentPlayer;
+        }
+        else if (roundWinner == 1) {
+            ++computerPlay;
+        }
+        else if (roundWinner == 2) {
+            ++tie;
+        }
+
+        roundWinner = game()
+        if (roundWinner == 0) {
+            ++currentPlayer;
+        }
+        else if (roundWinner == 1) {
+            ++computerPlay;
+        }
+        else if (roundWinner == 2) {
+            ++tie;
+        }
+
+        roundWinner = game()
+        if (roundWinner == 0) {
+            ++currentPlayer;
+        }
+        else if (roundWinner == 1) {
+            ++computerPlay;
+        }
+        else if (roundWinner == 2) {
+            ++tie;
+        }
+
+        alert("Your Score: " + currentPlayer + "\n" + "Computer Score:" + computerPlay + "\n" + "You have tie:" + tie)
+
+        /*
+        if (currentPlayer>tie||computerPlay) {
+        alert("Congrats you are the winner! your score is " +currentPlayer+".Computer score is "+ computerPlay);
+        }
+        
+        else if (computerPlay>tie||currentPlayer) {
+        alert ("Too bad you have lost! your score is "+ currentPlayer +".Computer score is "+ computerPlay);
+        }
+        
+        else if (tie>computerPlay||currentPlayer) {
+        alert("It is a tie! "+ "Your score is. "+currentPlayer +".Computer score is "+ computerPlay);
+        }
+        */
+    }
+
+    multipleRounds()
+
+
+
+</script>

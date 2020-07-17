@@ -1,129 +1,141 @@
-<script>
-    function game() {
-        const choice = ["rock", "paper", "scissors"]
-        // Prompt to ask player choice. Make it case insentitive
-        let currentPlayer = prompt("Please input: Rock, Paper, Scissors").toLowerCase();
-        // computer random choice
-        let computerPlay = choice[Math.floor(Math.random() * choice.length)];
-        //single round winner
-        //0 =win
-        //1 = lost
-        //2=tie
-        let outcome = 0
-        // determine winner
-
-        if (currentPlayer === computerPlay) {
-            alert("It is a tie!");
-            outcome = 2
-        }
-        else if (computerPlay === "rock" && currentPlayer === "paper") {
-            alert("Paper beats Rock. You win !");
-            outcome = 0
-        }
-        else if (computerPlay === "paper" && currentPlayer === "rock") {
-            alert("Paper beats Rock. You lost.");
-            outcome = 1
-        }
-        else if (computerPlay === "paper" && currentPlayer === "scissors") {
-            alert("Scissors beats Paper. You win!");
-            outcome = 0
-        }
-        else if (computerPlay === "scissors" && currentPlayer === "paper") {
-            alert("Scissors beats Paper. You lost.");
-            outcome = 1
-        }
-        else if (computerPlay === "scissors" && currentPlayer === "rock") {
-            alert("Rock beats Scissors. You win!");
-            outcome = 0
-        }
-        else if (computerPlay === "rock" && currentPlayer === "scissors") {
-            alert("Rock beats Scissors. You lost.");
-            outcome = 1
-        }
-        return outcome
+<style>
+    * {
+        font-weight: bold;
+        color: white;
+        border-radius: 40em;
+        text-shadow: black 0px 0px 4px;
+        font-size: medium;
     }
 
-
-    function multipleRounds() {
-
-        let currentPlayer = 0
-        let computerPlay = 0
-        let tie = 0
-
-        roundWinner = game()
-        if (roundWinner == 0) {
-            ++currentPlayer;
-        }
-        else if (roundWinner == 1) {
-            ++computerPlay;
-        }
-        else if (roundWinner == 2) {
-            ++tie;
-        }
-
-        roundWinner = game()
-        if (roundWinner == 0) {
-            ++currentPlayer;
-        }
-        else if (roundWinner == 1) {
-            ++computerPlay;
-        }
-        else if (roundWinner == 2) {
-            ++tie;
-        }
-
-        roundWinner = game()
-        if (roundWinner == 0) {
-            ++currentPlayer;
-        }
-        else if (roundWinner == 1) {
-            ++computerPlay;
-        }
-        else if (roundWinner == 2) {
-            ++tie;
-        }
-
-        roundWinner = game()
-        if (roundWinner == 0) {
-            ++currentPlayer;
-        }
-        else if (roundWinner == 1) {
-            ++computerPlay;
-        }
-        else if (roundWinner == 2) {
-            ++tie;
-        }
-
-        roundWinner = game()
-        if (roundWinner == 0) {
-            ++currentPlayer;
-        }
-        else if (roundWinner == 1) {
-            ++computerPlay;
-        }
-        else if (roundWinner == 2) {
-            ++tie;
-        }
-
-        alert("Your Score: " + currentPlayer + "\n" + "Computer Score:" + computerPlay + "\n" + "You have tie:" + tie)
-
-        /*
-        if (currentPlayer>tie||computerPlay) {
-        alert("Congrats you are the winner! your score is " +currentPlayer+".Computer score is "+ computerPlay);
-        }
-        
-        else if (computerPlay>tie||currentPlayer) {
-        alert ("Too bad you have lost! your score is "+ currentPlayer +".Computer score is "+ computerPlay);
-        }
-        
-        else if (tie>computerPlay||currentPlayer) {
-        alert("It is a tie! "+ "Your score is. "+currentPlayer +".Computer score is "+ computerPlay);
-        }
-        */
+    #playerChoice {
+        top: 4em;
+        float: left;
     }
 
-    multipleRounds()
+    #scoreboard {
+        background: pink;
+        width: 15em;
+        height: 10em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5em;
+        white-space: break-spaces;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    #roundWinner {
+        width: 15em;
+        height: 5em;
+        margin-left: auto;
+        margin-right: auto;
+        background: pink;
+        white-space: break-spaces;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    #computerChoice {
+        top: 4em;
+        float: right;
 
-</script>
+    }
+
+    button {
+        background: transparent;
+        outline: none;
+
+    }
+
+    img {
+        height: 9em;
+        width: 8em;
+    }
+
+    h1 {
+        background: pink;
+        text-align: center;
+        height: 2em;
+        font-size: 1.5em;
+    }
+
+    h2 {
+        background: pink;
+    }
+
+    h3 {
+        background: pink;
+    }
+
+    #selectionImg {
+        background: pink;
+        height: 16em;
+        width: 15em;
+        position: absolute;
+        top: 20em;
+        left:1.5em;
+}
+#computerImg {
+    background:pink;
+    height: 16em;
+        width: 15em;
+        position: absolute;
+        top: 20em;
+        right:1.5em;
+}
+</style>
+
+<body>
+    <h1>
+        Rock Paper Scissors Game.
+    </h1>
+    <div id="playerChoice">
+        <h2>
+            Please select choice
+        </h2>
+        <button type="button">
+            <img src="https://thumbs.dreamstime.com/b/digital-illustration-cartoon-rock-cartoon-rock-wants-kiss-118558091.jpg "
+                alt="rock logo" id="rock">
+        </button>
+        <button type="button">
+            <img src="https://thumbs.dreamstime.com/b/creative-sticker-cute-cartoon-shocked-paper-document-original-150980100.jpg"
+                alt="paper logo" id="paper">
+        </button>
+        <button type="button">
+            <img src="https://cdn3.vectorstock.com/i/thumb-large/57/57/cute-scissor-cartoon-vector-15685757.jpg"
+                alt="scissors logo" id="scissors">
+        </button>
+    </div>
+    <div id="computerChoice">
+        <h3>
+            Computer Player
+        </h3>
+        <button type="button">
+            <img src="https://thumbs.dreamstime.com/b/digital-illustration-cartoon-rock-cartoon-rock-wants-kiss-118558091.jpg"
+                id="rock">
+        </button>
+        <button type="button">
+            <img src="https://thumbs.dreamstime.com/b/creative-sticker-cute-cartoon-shocked-paper-document-original-150980100.jpg"
+                id="paper">
+        </button>
+        <button type="button">
+            <img src="https://cdn3.vectorstock.com/i/thumb-large/57/57/cute-scissor-cartoon-vector-15685757.jpg"
+                id="scissors">
+        </button>
+    </div>
+    <div id="roundWinner">
+    </div>
+    <div id="scoreBoard">
+    </div>
+    <div id="yourSelection">
+        <img id="selectionImg">
+    </div>
+    <div id="computerSelection">
+        <img id="computerImg">
+
+    </div>
+</body>
+
+<script type="text/javascript" src="index.js"></script>
