@@ -101,16 +101,16 @@ function displayBoard() {
             + "You have tied:" + tie)
     }
 
-    else if (playerScore = 5) {
+    else if (playerScore===5) {
         return (" You are the overall Winner ! Refresh to play again")
     }
 
-    else if (computerScore = 5) {
-        return ("AI will take over the world. You lost :( . Refresh to regain your dignity ")
+    else if (computerScore===5) {
+        return ("AI will take over the world. You lost :(. Refresh to regain your dignity")
     }
 
-    else if (tie = 5) {
-        return ("No winner. It's a Tie. Refresh to play again")
+    else if (tie ===5) {
+        return ("No winner. It's a Tie. + Refresh to play again")
     }
 }
 
