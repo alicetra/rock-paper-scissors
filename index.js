@@ -110,7 +110,7 @@ function displayBoard() {
     }
 
     else if (tie ===5) {
-        return ("No winner. It's a Tie. + Refresh to play again")
+        return ("No winner. It's a Tie. Refresh to play again")
     }
 }
 
