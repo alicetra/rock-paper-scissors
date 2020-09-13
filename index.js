@@ -17,7 +17,7 @@ document.getElementById("paper").onclick = function (e) {
 document.getElementById("scissors").onclick = function (e) {
     currentPlayer = "scissors"
     img = document.getElementById("selectionImg")
-    img.src = "https://cdn3.vectorstock.com/i/thumb-large/57/57/cute-scissor-cartoon-vector-15685757.jpg"
+    img.src = "https://www.seekpng.com/png/detail/86-869321_yellow-clipart-scissors-cute-scissors-clipart-free.png"
     document.getElementById("roundWinner").innerHTML = game()
     document.getElementById("scoreBoard").innerHTML = displayBoard()
 }
@@ -47,7 +47,7 @@ function game() {
 
     else if (currentPlayer === "scissors" && computerPlay==="scissors") {
         img = document.getElementById("computerImg")
-    img.src = "https://cdn3.vectorstock.com/i/thumb-large/57/57/cute-scissor-cartoon-vector-15685757.jpg"
+    img.src = "https://www.seekpng.com/png/detail/86-869321_yellow-clipart-scissors-cute-scissors-clipart-free.png"
         ++tie
         return ("It is a tie!");
     }
@@ -73,14 +73,14 @@ function game() {
     }
     else if (computerPlay === "scissors" && currentPlayer === "paper") {
         img = document.getElementById("computerImg")
-        img.src = "https://cdn3.vectorstock.com/i/thumb-large/57/57/cute-scissor-cartoon-vector-15685757.jpg"
+        img.src = "https://www.seekpng.com/png/detail/86-869321_yellow-clipart-scissors-cute-scissors-clipart-free.png"
         ++computerScore
         return ("Scissors beats Paper. You lost.");
 
     }
     else if (computerPlay === "scissors" && currentPlayer === "rock") {
         img = document.getElementById("computerImg")
-        img.src = "https://cdn3.vectorstock.com/i/thumb-large/57/57/cute-scissor-cartoon-vector-15685757.jpg"
+        img.src = "https://www.seekpng.com/png/detail/86-869321_yellow-clipart-scissors-cute-scissors-clipart-free.png"
         ++playerScore
         return ("Rock beats Scissors. You win!");
 
@@ -110,7 +110,7 @@ function displayBoard() {
     }
 
     else if (tie ===5) {
-        return ("No winner. It's a Tie. Refresh to play again")
+        return ("It's a Tie. Refresh to play again")
     }
 }
 
