@@ -102,15 +102,22 @@ function displayBoard() {
     }
 
     else if (playerScore===5) {
-        return (" You are the overall Winner ! Refresh to play again")
+        return(" You are the overall Winner!")
+        
     }
 
     else if (computerScore===5) {
-        return ("AI will take over the world. You lost :(. Refresh to regain your dignity")
+       return ("AI will take over the world. You lost")
+     
     }
 
     else if (tie ===5) {
-        return ("It's a Tie. Refresh to play again")
+        return ("It's a Tie.")
+         
+    }
+
+    else {
+        return ("Please refresh page for new round")
     }
 }
 
